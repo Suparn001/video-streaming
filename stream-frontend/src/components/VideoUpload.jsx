@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import videoLogo from '../assets/video-posting.png'
 import { Alert, Button, Card, FileInput, Label, Progress, Textarea, TextInput } from 'flowbite-react'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const VideoUpload = () => {
 
@@ -28,8 +29,6 @@ const VideoUpload = () => {
       [name]: value,
     }));
   }
-
-
 
 
   function handleForm(event) {
@@ -65,9 +64,11 @@ const VideoUpload = () => {
           setProgress(progressPercentage);
         }
       });
-      setMessage("Video Uploaded Successfully");
-      setUploading(false);
+
       setProgress(0);
+      setMessage(`Video Uploaded Successfully with id ${resposne.data.videoId}`);
+      setUploading(false);
+      toast.success("Video Uploaded Successfully");
       console.log(resposne);
       resetFrom();
     } catch (error) {

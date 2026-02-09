@@ -13,8 +13,10 @@
     "@tailwindcss/vite": "^4.1.18",
     "axios": "^1.13.4",
     "flowbite-react": "^0.12.16",
+    "hls.js": "^1.6.15",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.18",
     "videojs-contrib-quality-levels": "^4.1.0",
     "videojs-http-source-selector": "^1.1.6"
